@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Performance - Top Queries By Average Cpu Time
+    </title>
+    <style>:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#0645AD;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:1rem 0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:0rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}section aside img{max-width:100%}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color-secondary);display:inline-block;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0} article{padding: 1.25rem;}.v-cover{height: 480px; object-fit: cover;width: 100vw;cursor: pointer;}.v-image{height: 250px; object-fit: cover;width: 100vw;cursor: pointer;}.dwn-cover{max-height: 460px; object-fit: cover;}.w-100{width: 100vw}.search-box{color:#333;background-color:#f5f5f5;width:85%;height:50px;padding:0 20px;border:none;border-radius:20px;outline:0;border:1px solid #002cd92e}.search-box:active,.search-box:focus,.search-box:hover{border:1px solid #d9008e}.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;padding:.375rem .75rem;margin:0.5rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}
+</style>
+	<script type="application/ld+json">
+    [{
+      "@context": "https://schema.org/", 
+      "@type": "ImageObject",
+      "contentUrl": "https://www.heroix.com/wp-content/uploads/2021/01/TOP-5O-SQL-QUERIES-HIGH-CPU.png",
+      "license": "/p/copyright.html",
+      "acquireLicensePage": "/p/disclaimer.html"
+    },
+   {
+    "@context": "https://schema.org/", 
+      "@type": "ImageObject",
+      "contentUrl": "/search?q=linux&amp;tbm=isch",
+      "license": "/p/copyright.html",
+      "acquireLicensePage": "/p/disclaimer.html"
+    },
+    {
+    "@context": "https://schema.org/", 
+      "@type": "ImageObject",
+      "contentUrl": "https://i.stack.imgur.com/xil8i.png",
+      "license": "/p/copyright.htmll",
+      "acquireLicensePage": "/p/disclaimer.html"
+    },
+   {
+    "@context": "https://schema.org/", 
+      "@type": "ImageObject",
+      "contentUrl": "https://user-images.githubusercontent.com/1044450/70623212-81746000-1c15-11ea-82f6-b2d97ba21a81.png",
+      "license": "/p/copyright.html",
+      "acquireLicensePage": "/p/disclaimer.html"
+    },
+    {
+    "@context": "https://schema.org/", 
+      "@type": "ImageObject",
+      "contentUrl": "https://i.stack.imgur.com/7pgwY.png",
+      "license": "/p/copyright.html",
+      "acquireLicensePage": "/p/disclaimer.html"
+    }
+    ]
+</script>	<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4556769,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4556769&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+<script type='text/javascript' src='//pl16352978.safestcontentgate.com/e9/91/22/e991225b2428bf361b28c82a1fc41604.js'></script></head>
+<body>
+    <header>
+        <h1>
+            <a href="/">
+            Performance - Top Queries By Average Cpu Time
+            </a>
+        </h1>
+        <p>
+                            Rekapan Hasil Pengeluaran Nomer hk. Togel. SGP. SDY Tercepat dan Terbaru.
+                    </p>
+        <center>
+            <input class='search-box' id="search-box" placeholder='Search and hit enter..' type='text' name="q" required autocomplete="off" id="search-query">
+            <div class="d-block p-4">
+	<center>
+		<!-- TOP BANNER ADS -->
+	</center>
+</div>        </center>
+    </header>
+    <main>
+        <article>
+    <p><strong>Performance - Top Queries By Average Cpu Time</strong>. Running with MAXDOP 1 not in parallel gives the following results. The report might look like this.</p>
+            <figure>
+        <img class="v-cover ads-img" src="https://www.codeproject.com/KB/database/879989/image001.jpg" alt="Troubleshooting High Cpu Utilization For Sql Server Codeproject" style="width: 100%; padding: 5px; background-color: grey;"  onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqK4wlowm5ocWPSzKjG35uDQxH_qWDJNGj3A';">
+        <figcaption>Troubleshooting High Cpu Utilization For Sql Server Codeproject from www.codeproject.com</figcaption>
+    </figure>
+        <p>
+        CPU time 24500 ms elapsed time 6357 ms. If the Processor Time value is constantly high check the disk and network metrics first. SELECT TOP 50 Avg.
+    </p>
+    <h3>SQL Server Execution Times.</h3>
+    <p>The amount of time taken by the captured query. However the CPU time is less in the view when compared to direct SQL and UDF. Shows information on queries in cache that have the highest average CPU time. The query returns both the SQL Text from the sysdm_exec_sql_text DMV and the XML Showplan data from the sysdm_exec_query_plan DMV.</p>
+</article>
+
+<section>
+
+    <aside>
+        <img class="v-image ads-img" alt="Monitoring Real Time Database Performance" src="https://docs.oracle.com/database/121/TDPPT/img/GUID-533A9E7C-AFB9-4214-A7BF-16BCF188198D-default.gif" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqAiETHEWJB_CXEijDgxDSuzUrhbTMvstHwzeiNcI_wXa8BNVbAg68tTVwZ_T117z23MY';" />
+        <small>Source: docs.oracle.com</small>
+                    <p>Therefore it is recommended to run.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Mysql Process Goes Over 100 Of Cpu Usage Server Fault" src="https://i.stack.imgur.com/vcvhX.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvWHx07VSiR6w1cV-vj9BVFzYn5RDCmgYPVy8KaARWW4zx8K2XJVMc_wdmUpgvk0c3M-Q';" />
+        <small>Source: serverfault.com</small>
+                    <p>Once youve identified the queries with high CPU usage 1 Check if Is Auto Create and Update Statistics is Enabled.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="How To Find Out Cpu Utilization In Linux Oracle Pranav S Blog" src="http://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/ff10dc11029ed1cfe1767b47388294a5/top.jpeg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNpY3vLcJHZkQjY-vGF4WqKSrxivzJjFE6B6koeRP4ANeO3cE0mXHbBj9eYxY6FmdLIDA';" />
+        <small>Source: blogs.oracle.com</small>
+                    <p>If these values are higher than the recommended it clearly indicates.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Troubleshooting High Cpu Utilization For Sql Server Codeproject" src="https://www.codeproject.com/KB/database/879989/image002.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGJatHIJzOXH03EUAm4_N0y46cmYsWbfwt8g';" />
+        <small>Source: www.codeproject.com</small>
+                    <p>The first Graph section is a color palette sorted in descending order the Top queries that are consuming Average CPU Time and Total CPU Time.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Monitor Cpu Usage On Sql Server And Azure Sql Argon Systems" src="https://gxcuf89792.i.lithium.com/t5/image/serverpage/image-id/117631i734E8464BAB8B0F4/image-size/large?v=1.0&amp;px=999" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREz98DoybFvnt3PWBGwVFlSKswI0eZdOcPlzxTKuB3fwz1BIpQVir1Iv6aanGL_bgMSIU';" />
+        <small>Source: argonsys.com</small>
+                    <p>To confirm this check the average and current Processor Queue Length value.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Azure Sql Dtu Cpu Usage Disparity Stack Overflow" src="https://i.stack.imgur.com/7pgwY.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJGCDVI9C32n8tFqCQv4ZUNKiU1q8ZbzNEcJALL69NtXGknqXO0Ncj_TAwK4NNswaWAS0';" />
+        <small>Source: stackoverflow.com</small>
+                    <p>Most of the time and thresholds are defined at the top of the query so you can adjust them as needed.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="How To Check Cpu Usage Utilization In Linux System Computingforgeeks" src="https://computingforgeeks.com/wp-content/uploads/2019/07/htop.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAaTk96JqHg55PvZnKbcLXfTZLB6snUXputA';" />
+        <small>Source: computingforgeeks.com</small>
+                    <p>No query is perfect so try it out play with it the best way to learn the language is to jump.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Finding Sql Server Cpu Problems With Dmv Queries Longitude" src="https://www.heroix.com/wp-content/uploads/2021/01/TOP-5O-SQL-QUERIES-HIGH-CPU.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9WRrvaLjF604h0A_TNCg4AsHDvCg2ti0cH0X1_BZxlVWD80xatJEznEUs5IJctMqsIo4';" />
+        <small>Source: www.heroix.com</small>
+                    <p>SELECT TOP X qstotal_worker_timeqsexecution_count60000000 as Minutes Avg CPU Time qsexecution_count as Times Run qsmin_worker_time60000000 as CPU Time in Mins SUBSTRINGqttextqsstatement_start_offset2 case when qsstatement_end_offset -1 then lenconvertnvarcharmax qttext 2 else qsstatement_end_offset end -qsstatement_start_offset2 as Query Text db_nameqtdbid as Database object_nameqtobjectid as Object Name FROM sysdm_exec_query.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="High Cpu Usage From Postgres Issue 2326 Chocobozzz Peertube Github" src="https://user-images.githubusercontent.com/1044450/70623212-81746000-1c15-11ea-82f6-b2d97ba21a81.png" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUa6ZFHnA1vwvHxVX1DXvogOoTR1G4hIXIrMYLl_vkUWnP0LEGXYyI7MqXRe8wzJZyGlI';" />
+        <small>Source: github.com</small>
+                    <p>Top 10 average CPU consuming queries SELECT TOP 10 TOTAL_WORKER_TIME EXECUTION_COUNT TOTAL_WORKER_TIME EXECUTION_COUNT AS AVG CPU TIME QTTEXT AS QUERYTEXT FROM SYSDM_EXEC_QUERY_STATS QS CROSS APPLY SYSDM_EXEC_SQL_TEXTQSPLAN_HANDLE AS QT ORDER BY.</p>
+    </aside>
+</section>
+<section>
+    <article>
+        <p>
+                                
+                            <a href="/paito-warna-hk-6d-rajapaito.html"><i>&larr; paito warna hk 6d rajapaito</i></a>
+                                                                    
+                                        <a href="/data-china-sahabat-4d.html"><i>data china sahabat 4d &rarr;</i></a>
+                                        </p>
+    </article>
+</section>
+		<center>
+			<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>		</center>
+    </main>
+    <footer style="padding-top: 50px;">
+        <center>
+                            <a href="/p/dmca.html">Dmca</a>
+                            <a href="/p/contact.html">Contact</a>
+                            <a href="/p/privacy-policy.html">Privacy Policy</a>
+                            <a href="/p/copyright.html">Copyright</a>
+                    </center>
+    </footer>
+    <script type='text/javascript' src='//pl16256869.safestcontentgate.com/ad/b5/9d/adb59d619c6c8035ab62d69a1aa40d69.js'></script>            <script type="text/javascript">
+        var search = document.getElementById("search-box");
+        search.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                var target = 'site:'+location.host+' '+search.value;
+                var uri= 'https://www.google.com/search?q='+encodeURIComponent(target);
+                window.location= uri;
+            }
+        });
+    </script>
+</body>
+
+</html>
